@@ -1,0 +1,10 @@
+<div *ngIf= "!postcommentData" align="center">
+        <img src="/app/image/loader.gif">
+</div>
+<div  *ngIf= "postcommentData">
+    <h3><u>Comments</u></h3>
+    
+    <ul *ngFor = 'let data of postcommentData'>
+            <li>{{data.body}}</li>
+    </ul>
+</div>    

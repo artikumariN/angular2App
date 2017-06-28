@@ -1,0 +1,25 @@
+
+<div *ngIf= "!employeeListdata.records" align="center">
+        <img src="/app/image/loader.gif">
+</div>
+<div *ngIf= "employeeListdata.records"> 
+<h2><u>User List</u></h2>
+<table class="table">
+    <thead>
+      <tr>
+       
+        <th>Name</th>
+        <th>City</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let employee of employeeListdata.records'>
+        <td>{{employee.Name}}</td>
+         <td>{{employee.City}}</td>
+        <td>{{employee.Country}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

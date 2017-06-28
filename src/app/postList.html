@@ -1,0 +1,9 @@
+<div *ngIf= "!resPostdata" align="center">
+        <img src="/app/image/loader.gif">
+</div>
+<div *ngIf= "resPostdata">
+    <h2><u>POST LIST</u></h2>
+    <ul *ngFor = 'let employee of resPostdata'>
+        <li>{{employee.title}} {{employee.body}} </li>
+    </ul>
+</div>    
